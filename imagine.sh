@@ -13,6 +13,7 @@ ABOUT="Imagine generates a static HTML photo gallery from a folder of images."
 FORMATS="This script currently supports only JPEG files with a .jpg extension."
 DEPENDS="Imagine requires that mogrify (part of ImageMagick) be in your path."
 FOLDERSTRUCTURE="Imagine requires one folder containing images as input (no sub-folders)."
+SITENAME="Trey Deitch"
 
 # If no arguments or '--help' was passed, display the help message
 if [ $# -eq 0 ] || [ $1 == "--help" ]
@@ -101,8 +102,6 @@ done
 # Get the site name and album name
 echo $NUMBEROFIMAGES files found
 echo "WARNING: spaces in filenames will be converted to underscores."
-echo -n "Enter the site name and press [ENTER]: "
-read SITENAME
 echo -n "Enter the album name and press [ENTER]: "
 read ALBUMNAME
 
@@ -121,10 +120,14 @@ INDEXTOP="<!DOCTYPE HTML>
 <meta charset=utf-8>
 <title>$SITENAME: $ALBUMNAME</title>
 <link href=\"style.css\" rel=stylesheet type=\"text/css\">
+<link href=\"../../style.css\" rel=stylesheet type=\"text/css\">
+<script src=\"/mint/?js\" type=\"text/javascript\"></script>
 </head>
 <body>
-<a href=\"../\"><h1>$SITENAME</h1></a>
-<h2>$ALBUMNAME</h2>
+<a href=\"../../\"><h1>$SITENAME</h1></a>
+<a href=\"../\"><h2>Photos</h2></a>
+<h3>$ALBUMNAME</h3>
+<p class=\"navigation\" title=\"all albums\"><a href=\"../\">☝</a></p>
 "
 INDEXBOTTOM="</body>
 </html>
@@ -206,10 +209,13 @@ HTMLTOP="<!DOCTYPE HTML>
 <meta charset=utf-8>
 <title>$SITENAME: $ALBUMNAME</title>
 <link href=\"style.css\" rel=stylesheet type=\"text/css\">
+<link href=\"../../style.css\" rel=stylesheet type=\"text/css\">
+<script src=\"/mint/?js\" type=\"text/javascript\"></script>
 </head>
 <body>
-<a href=\"../\"><h1>$SITENAME</h1></a>
-<a href=\"./\"><h2>$ALBUMNAME</h2></a>"
+<a href=\"../../\"><h1>$SITENAME</h1></a>
+<a href=\"../\"><h2>Photos</h2></a>
+<a href=\"./\"><h3>$ALBUMNAME</h3></a>"
 HTMLBOTTOM="</body>
 </html>
 "
