@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Raleway'), url('raleway_thin.otf') format('opentype');
+}
+
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 5% 10% 0 10%;
+}
+
+header {
+    font-family: 'Raleway';
+}
+
+h1 {
+    font-size: 4em;
+    margin-bottom: 0;
+}
