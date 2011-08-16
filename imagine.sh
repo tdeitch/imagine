@@ -118,8 +118,8 @@ INDEXTOP="<!DOCTYPE HTML>
 <html lang=en>
 <head>
 <meta charset=utf-8>
-<title>$SITENAME: $ALBUMNAME</title>
-<link href=\"style.css\" rel=stylesheet type=\"text/css\">
+<title>$SITENAME: Photos</title>
+<link href=\"../style.css\" rel=stylesheet type=\"text/css\">
 <link href=\"../../style.css\" rel=stylesheet type=\"text/css\">
 <script src=\"/mint/?js\" type=\"text/javascript\"></script>
 </head>
@@ -158,57 +158,14 @@ echo $INDEXTOP $INDEXMIDDLE $INDEXBOTTOM >> index.html
 
 echo "done"
 
-# Write the style.css file
-echo -n "Writing CSS file: "
-echo "body {
-    margin-left: 10%;
-    margin-right: 20px;
-}
-
-p.navigation {
-    margin-left: -25%;
-    margin-right: -5%;
-    text-align: center;
-    font-size: 1.5em;
-}
-
-a {
-    text-decoration: none;
-    color: #000000;
-}
-
-div {
-    padding-bottom: 20px;
-}
-
-div.left {
-    clear: left;
-    width: 200px;
-    float: left;
-    padding-right: 20px;
-}
-
-div.center {
-    width: 200px;
-    float: left;
-    padding-right: 20px;
-}
-
-div.right {
-    width: 200px;
-    float: left;
-}
-" >> style.css
-echo "done"
-
 # Write the individual html pages
 echo -n "Generating individual HTML pages: "
 HTMLTOP="<!DOCTYPE HTML>
 <html lang=en>
 <head>
 <meta charset=utf-8>
-<title>$SITENAME: $ALBUMNAME</title>
-<link href=\"style.css\" rel=stylesheet type=\"text/css\">
+<title>$SITENAME: Photos</title>
+<link href=\"../style.css\" rel=stylesheet type=\"text/css\">
 <link href=\"../../style.css\" rel=stylesheet type=\"text/css\">
 <script src=\"/mint/?js\" type=\"text/javascript\"></script>
 </head>
