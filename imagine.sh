@@ -119,8 +119,8 @@ INDEXTOP="<!DOCTYPE HTML>
 <head>
 <meta charset=utf-8>
 <title>$SITENAME: Photos</title>
+<link href=\"../../css/global.css\" rel=stylesheet type=\"text/css\">
 <link href=\"../style.css\" rel=stylesheet type=\"text/css\">
-<link href=\"../../style.css\" rel=stylesheet type=\"text/css\">
 <script src=\"/mint/?js\" type=\"text/javascript\"></script>
 </head>
 <body>
@@ -165,8 +165,8 @@ HTMLTOP="<!DOCTYPE HTML>
 <head>
 <meta charset=utf-8>
 <title>$SITENAME: Photos</title>
+<link href=\"../../css/global.css\" rel=stylesheet type=\"text/css\">
 <link href=\"../style.css\" rel=stylesheet type=\"text/css\">
-<link href=\"../../style.css\" rel=stylesheet type=\"text/css\">
 <script src=\"/mint/?js\" type=\"text/javascript\"></script>
 </head>
 <body>
