@@ -6,9 +6,10 @@
 # 2: the script was given input other than one directory
 # 3: a filename used by the script already exists
 # 4: missing dependencies
+# 5: user aborted
 
 VERSION="Imagine v1.0 by Trey Deitch. MIT Licensed."
-USAGE="Usage: gallery.sh /path/to/photos/"
+USAGE="Usage: imagine.sh /path/to/photos/"
 ABOUT="Imagine generates a static HTML photo gallery from a folder of images."
 FORMATS="This script currently supports only JPEG files with a .jpg extension."
 DEPENDS="Imagine requires that mogrify (part of ImageMagick) be in your path."
@@ -98,15 +99,20 @@ for f in *.jpg
 do
     NUMBEROFIMAGES=`expr $NUMBEROFIMAGES + 1`
 done
-
-# Get the site name and album name
 echo $NUMBEROFIMAGES files found
-echo "WARNING: spaces in filenames will be converted to underscores."
+
+# Get the album name
 echo -n "Enter the album name and press [ENTER]: "
 read ALBUMNAME
 
 # Convert spaces to underscores
-echo "converting spaces to underscores: "
+echo -n "Spaces in filenames will be converted to underscores. Continue? [Y/n]: "
+read CONTINUE
+if [ $CONTINUE != "Y" ] && [ $CONTINUE != "y" ] && [ $CONTINUE != "" ]; then
+echo "Aborting."
+exit 5
+fi
+echo "Converting spaces to underscores: "
 for f in *.jpg
 do
     mv -v "$f" `echo $f | tr ' ' '_' `
