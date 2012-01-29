@@ -1,4 +1,4 @@
-Imagine v1.0 by Trey Deitch. MIT Licensed.
+Imagine v1.0 by Trey Deitch. MIT Licensed.  
 Usage: imagine.sh /path/to/photos/
 
 Imagine generates a static HTML photo gallery from a folder of images.
